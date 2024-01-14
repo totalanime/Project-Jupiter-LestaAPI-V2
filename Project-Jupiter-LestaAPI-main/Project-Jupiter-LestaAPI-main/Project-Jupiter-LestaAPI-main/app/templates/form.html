@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поиск по SPA_ID</title>
+    <script>
+        function viewHistory() {
+            window.location.href = '/history';
+        }
+    </script>
+</head>
+<body>
+    <h1>Поиск по SPA_ID</h1>
+    <form action="/" method="post">
+        <label for="nickname">Введите SPA_ID:</label>
+        <input type="text" id="nickname" name="nickname" required>
+        <button type="submit">Поиск</button>
+    </form>
+    <br>
+    <button onclick="viewHistory()">Посмотреть историю запросов</button>
+</body>
+</html>

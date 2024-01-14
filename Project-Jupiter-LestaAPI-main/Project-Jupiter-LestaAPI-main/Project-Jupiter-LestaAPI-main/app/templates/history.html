@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>История запросов</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>История запросов</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>SPA_ID</th>
+        </tr>
+        {% for record in history_records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <button onclick="backToSearch()">Вернуться к поиску</button>
+
+    <script>
+        function backToSearch() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

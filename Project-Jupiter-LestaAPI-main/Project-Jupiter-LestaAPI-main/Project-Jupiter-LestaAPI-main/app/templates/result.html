@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат</title>
+</head>
+<body>
+    <h1>Результат</h1>
+    <ul>
+    {% for key, value in result.items() %}
+        <li>{{ key }}: {{ value }}</li>
+    {% endfor %}
+    </ul>
+    <button onclick="viewHistory()">Посмотреть историю запросов</button>
+    <br>
+    <br>
+    <button onclick="backToSearch()">Вернуться к поиску</button>
+
+    <script>
+        function viewHistory() {
+            window.location.href = '/history';
+        }
+
+        function backToSearch() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
